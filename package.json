@@ -17,7 +17,7 @@
         "test": "floss --path test",
         "coverage": "nyc mocha",
         "build": "yarn build:types",
-        "build:types": "rimraf ./compile && tsc -p ./tsconfig.json --outDir ./compile",
+        "build:types": "tsc -p ./tsconfig.json --outDir ./compile",
         "docs": "vite build && rimraf ./js && tsc -p ./tsconfig-docs.json --outDir js && rimraf ./docs/dist/jsdoc/ && jsdoc -c .jsdoc.json && node ./scripts/copy",
         "docs:serve": "vite preview --outDir dist/",
         "upgrade": "yarn upgrade-interactive --latest",
@@ -50,7 +50,9 @@
         "@pixi/math": "^7.0.4",
         "@pixi/ticker": "^7.0.4"
     },
-    "dependencies": {},
+    "dependencies": {
+        "penner": "^0.1.3"
+    },
     "devDependencies": {
         "@pixi/display": "^7.0.4",
         "@pixi/eslint-config": "^4.0.1",
@@ -58,6 +60,7 @@
         "@pixi/math": "^7.0.4",
         "@pixi/ticker": "^7.0.4",
         "@types/offscreencanvas": "^2019.6.4",
+        "@types/penner": "^0.1.0",
         "@typescript-eslint/eslint-plugin": "^5.5.0",
         "@typescript-eslint/parser": "^5.5.0",
         "clicked": "^4.0.3",

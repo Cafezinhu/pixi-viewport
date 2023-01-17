@@ -1,5 +1,3 @@
-// eslint-disable-next-line
-// @ts-expect-error Penner seems to have no typings.
 import Penner from 'penner';
 
 /**
@@ -15,6 +13,7 @@ export default function ease(ease: any, defaults?: any): any
 {
     if (!ease)
     {
+        //@ts-ignore
         return Penner[defaults];
     }
     else if (typeof ease === 'function')
@@ -23,6 +22,7 @@ export default function ease(ease: any, defaults?: any): any
     }
     else if (typeof ease === 'string')
     {
+        //@ts-ignore
         return Penner[ease];
     }
 }
