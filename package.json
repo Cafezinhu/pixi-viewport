@@ -2,9 +2,7 @@
     "name": "pixi-viewport",
     "version": "4.38.0",
     "description": "A highly configurable viewport/2D camera designed to work with pixi.js. Features include dragging, pinch-to-zoom, mouse wheel zooming, decelerated dragging, follow target, snap to point, snap to zoom, clamping, bouncing on edges, and move on mouse edges.",
-    "main": "dist/cjs/viewport.js",
-    "module": "dist/esm/viewport.es.js",
-    "bundle": "dist/viewport.min.js",
+    "main": "compile/index.js",
     "types": "index.d.ts",
     "directories": {
         "doc": "docs"
@@ -18,8 +16,8 @@
         "dev": "vite dev",
         "test": "floss --path test",
         "coverage": "nyc mocha",
-        "build": "rollup -c && yarn build:types",
-        "build:types": "rimraf ./compile && tsc -p ./tsconfig.json --outDir compile && api-extractor run",
+        "build": "yarn build:types",
+        "build:types": "rimraf ./compile && tsc -p ./tsconfig.json --outDir ./compile",
         "docs": "vite build && rimraf ./js && tsc -p ./tsconfig-docs.json --outDir js && rimraf ./docs/dist/jsdoc/ && jsdoc -c .jsdoc.json && node ./scripts/copy",
         "docs:serve": "vite preview --outDir dist/",
         "upgrade": "yarn upgrade-interactive --latest",

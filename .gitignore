@@ -4,6 +4,5 @@ node_modules
 *.iml
 .idea
 .DS_Store
-compile
 js
 dist
