@@ -1,8 +1,7 @@
 import { Container } from '@pixi/display';
 import type { DisplayObject } from '@pixi/display';
 import type { IDestroyOptions } from '@pixi/display';
-import type { IHitArea } from '@pixi/interaction';
-import type {FederatedEvent, EventSystem} from '@pixi/events';
+import type {FederatedEvent, EventSystem, IHitArea} from '@pixi/events';
 import { IPointData } from '@pixi/math';
 import { Point } from '@pixi/math';
 import { Rectangle } from '@pixi/math';
