@@ -10,7 +10,8 @@
     "files": [
         "dist",
         "index.d.ts",
-        "src"
+        "src",
+        "compile"
     ],
     "scripts": {
         "dev": "vite dev",
